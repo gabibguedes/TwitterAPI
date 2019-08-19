@@ -3,7 +3,7 @@
 ### Tokens:
 
 Crie um arquivo `tokens.py` com os tokens criados para o seu app com o seu usuário desenvolvedor do twitter.
-Use o modelo de arquivo do `exemplo_tokens.py`
+Use o modelo de arquivo do `example_tokens.py`
 
 ### Rode o projeto:
 
