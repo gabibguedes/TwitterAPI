@@ -1,6 +1,6 @@
 import requests
 import json
-from tokens import BAREAR_TOKEN, API_TOKEN, API_TOKEN_SECRET
+from tokens import API_TOKEN, API_TOKEN_SECRET
 import base64
 import urllib.parse
 
@@ -24,7 +24,7 @@ def create_barear_token():
 
 
 def get_user_id(username):
-    header = {'authorization': 'Bearer ' + BAREAR_TOKEN}
+    header = {'authorization': 'Bearer ' + TOKEN}
     url = 'https://api.twitter.com/1.1/users/show.json?screen_name=' + username
     r = requests.get(url, headers=header)
     user = json.loads(r.text)
@@ -33,4 +33,5 @@ def get_user_id(username):
 
 
 create_barear_token()
-print(TOKEN)
+username = input('Write your username: ')
+get_user_id(username)
